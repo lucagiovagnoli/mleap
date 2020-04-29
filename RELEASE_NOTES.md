@@ -41,7 +41,8 @@
 ### New Features
 - Scikit-learn support for Multinomial Logistic Regression
 - Support for min/max values other than defaults (i.e. 0.0 and 1.0) in MinMaxScalerModel
-- Suppor for custom transformers (StringMap) in Pyspark
+- Support for custom transformers (StringMap) in Pyspark
+- Support for a performant implementation of the XGboost runtime (XGboost Predictor)
 
 ### Bug Fixes
 - Fix XGBoost sparse vector support
