@@ -3,11 +3,12 @@ package ml.combust.mleap.xgboost.runtime
 import ml.combust.mleap.core.types.{BasicType, NodeShape, ScalarType, StructField, TensorType}
 import ml.combust.mleap.runtime.frame.{DefaultLeapFrame, Transformer}
 import ml.combust.mleap.tensor.SparseTensor
-import ml.combust.mleap.xgboost.runtime.testing.{BoosterUtils, BundleSerializationUtils, CachedDatasetUtils, ClassifierUtils, FloatingPointApproximations}
 import ml.dmlc.xgboost4j.scala.Booster
 import org.apache.spark.ml.linalg.Vectors
 import org.scalatest.FunSpec
 import XgbConverters._
+
+import ml.combust.mleap.xgboost.runtime.testing._
 
 
 class XGBoostClassificationModelParitySpec extends FunSpec

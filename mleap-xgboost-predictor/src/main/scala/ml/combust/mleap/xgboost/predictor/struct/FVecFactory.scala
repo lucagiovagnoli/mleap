@@ -1,4 +1,4 @@
-package ml.combust.mleap.xgboost.runtime.struct
+package ml.combust.mleap.xgboost.predictor.struct
 
 import java.{lang, util}
 

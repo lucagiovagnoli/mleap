@@ -14,6 +14,7 @@ lazy val spark = MleapProject.spark
 lazy val sparkExtension = MleapProject.sparkExtension
 lazy val tensorflow = MleapProject.tensorflow
 lazy val xgboostRuntime = MleapProject.xgboostRuntime
+lazy val xgboostPredictorRuntime = MleapProject.xgboostPredictorRuntime
 lazy val xgboostSpark = MleapProject.xgboostSpark
 lazy val serving = MleapProject.serving
 lazy val executor = MleapProject.executor
