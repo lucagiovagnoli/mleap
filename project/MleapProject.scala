@@ -116,6 +116,15 @@ object MleapProject {
       sparkTestkit % "test")
   )
 
+  lazy val xgboostPredictorRuntime = Project(
+    id = "mleap-xgboost-predictor",
+    base = file("mleap-xgboost-predictor"),
+    dependencies = Seq(
+      runtime,
+      xgboostRuntime,
+      sparkTestkit % "test")
+  )
+
   lazy val xgboostSpark = Project(
     id = "mleap-xgboost-spark",
     base = file("mleap-xgboost-spark"),

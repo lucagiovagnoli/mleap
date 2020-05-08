@@ -1,10 +1,10 @@
-package ml.combust.mleap.xgboost.runtime
+package ml.combust.mleap.xgboost.predictor
 
 import biz.k11i.xgboost.Predictor
 import biz.k11i.xgboost.util.FVec
 import ml.combust.mleap.core.classification.ProbabilisticClassificationModel
-import org.apache.spark.ml.linalg.{Vector, Vectors}
 import ml.combust.mleap.core.types.{StructType, TensorType}
+import org.apache.spark.ml.linalg.{Vector, Vectors}
 import XgbConverters._
 
 
@@ -26,9 +26,9 @@ trait XGBoostPredictorClassificationModelBase extends ProbabilisticClassificatio
 }
 
 case class XGBoostPredictorBinaryClassificationModel(
-      override val predictor: Predictor,
-      override val numFeatures: Int,
-      override val treeLimit: Int) extends XGBoostPredictorClassificationModelBase {
+                                                      override val predictor: Predictor,
+                                                      override val numFeatures: Int,
+                                                      override val treeLimit: Int) extends XGBoostPredictorClassificationModelBase {
 
   override val numClasses: Int = 2
 
@@ -51,10 +51,10 @@ case class XGBoostPredictorBinaryClassificationModel(
 }
 
 case class XGBoostPredictorMultinomialClassificationModel(
-                       override val predictor: Predictor,
-                       override val numClasses: Int,
-                       override val numFeatures: Int,
-                       override val treeLimit: Int) extends XGBoostPredictorClassificationModelBase {
+                                                           override val predictor: Predictor,
+                                                           override val numClasses: Int,
+                                                           override val numFeatures: Int,
+                                                           override val treeLimit: Int) extends XGBoostPredictorClassificationModelBase {
 
   override def predict(data: FVec): Double = {
     probabilityToPrediction(predictProbabilities(data))
